@@ -1,0 +1,89 @@
+/* Reset styles */
+:root {
+    --c-main: #FFF;
+    --c-main-tr: rgba(255, 255, 255, 0.50);
+    --cb-main: #121212;
+    --c-accent: #BEA69E;
+    --cb-hero: #1D1D1D;
+  }
+  
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--c-main);
+    background-color: var(--cb-main);
+    margin: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+    
+  .marquee {
+    overflow: hidden;
+    font-family: "Pridi", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    text-transform: uppercase;
+    background-color: var(--cb-main);
+  }
+    
+  .marquee-inner {
+    display: flex;
+  }
+    
+  .marquee-line {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 10px 15px;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+    
+  @keyframes marqueeLine {
+    from {
+      transform: translateX(0);
+    }
+      
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .container {
+    min-width: 320px;
+    max-width: 374px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* overflow-x: auto; */
+    /* Temp  */
+    /* outline: 2px solid tomato;
+    outline-offset: -2px; */
+  }
+    
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 768px;
+      padding-left: 32px;
+      padding-right: 32px;
+      }
+  }
+    
+  @media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+  }
+    
+  @media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+      }
+  }
